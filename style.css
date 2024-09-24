@@ -1,0 +1,115 @@
+/* Base styles are already responsive-friendly for larger devices */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General responsive design for #like-me section */
+#like-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+/* Button Group */
+.btn-group {
+  margin-left: 0; /* Reset margin */
+  text-align: center;
+}
+.popup {
+  position: absolute;
+  color: white;
+  background-color: hotpink;
+  padding: 7px;
+  border-radius: 10px;
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  z-index: 1000; /* Ensures popups are always on top */
+}
+
+.Y_btn,
+.N_btn {
+  border: none;
+  padding: 4px 10px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  background: crimson;
+  margin: 5px; /* Add spacing between buttons */
+}
+
+.N_btn {
+  background: black;
+  position: relative; /* Remove absolute positioning for responsiveness */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: crimson;
+  margin-top: 50px;
+  font-style: italic;
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+/* Responsive Styles */
+
+/* For smaller mobile devices */
+@media only screen and (max-width: 600px) {
+  .Y_btn,
+  .N_btn {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  .popup {
+    font-size: 12px; /* Smaller popup text */
+    padding: 5px 10px; /* Smaller popup padding */
+  }
+}
+
+/* For tablets */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .Y_btn,
+  .N_btn {
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+}
+
+/* For laptops or medium screens */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .Y_btn,
+  .N_btn {
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+}
+
+/* For larger screens */
+@media only screen and (min-width: 1200px) {
+  .Y_btn,
+  .N_btn {
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+}
